@@ -4,14 +4,15 @@ import "./App.css";
 
 function App() {
   return (
-    <>
+    <> <ul>
       <h1>Theme Creator</h1>
 
-      <div className="color-container">
+      <li className="color-container">
         {initialColors.map((color) => {
           return <Color key={color.id} color={color} />;
         })}
-      </div>
+      </li>
+      </ul>
     </>
   );
 }
