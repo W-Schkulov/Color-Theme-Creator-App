@@ -11,12 +11,14 @@ function App() {
   };
   return (
     <>
-      <h1>Theme Creator</h1>
-      <ColorForm onAddColor={handleAddColor} />
-      <li key={color.id}>
-        <Color color={color} />
-      </li>
-      ;
+      {" "}
+      <ul>
+        <h1>Theme Creator</h1>
+        <ColorForm onAddColor={handleAddColor} />
+        <li key={color.id}>
+          <Color color={color} />
+        </li>
+      </ul>
     </>
   );
 }
