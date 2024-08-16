@@ -2,7 +2,7 @@ import React from "react";
 
 const ColorInput = ({ label, value, onChange }) => {
   return (
-    <div className="color-input">
+    <div className="color_input">
       <label>{label}</label>
       <input
         type="color"

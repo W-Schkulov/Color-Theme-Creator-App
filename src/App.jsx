@@ -13,11 +13,10 @@ function App() {
     <>
       <h1>Theme Creator</h1>
       <ColorForm onAddColor={handleAddColor} />
-      <div className="color-container">
-        {initialColors.map((color) => {
-          return <Color key={color.id} color={color} />;
-        })}
-      </div>
+      <li key={color.id}>
+        <Color color={color} />
+      </li>
+      ;
     </>
   );
 }
