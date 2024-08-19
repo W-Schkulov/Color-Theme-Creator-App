@@ -13,9 +13,9 @@ function App() {
   };
 
   return (
-    <> <ul>
+    <>
       <h1>Theme Creator</h1>
-   
+
       <ColorForm onAddColor={handleAddColor} />
       <ul>
         {colors.map((currentArrayItem) => (
