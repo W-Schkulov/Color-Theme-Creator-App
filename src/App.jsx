@@ -12,6 +12,9 @@ function App() {
     setColors([...colors, color]);
   };
 
+  const handleDeleteColor = (id) => {
+    setColors(colors.filter((color) => color.id !== id));
+  };
   return (
     <>
       <h1>Theme Creator</h1>
@@ -20,7 +23,7 @@ function App() {
       <ul>
         {colors.map((currentArrayItem) => (
           <li key={currentArrayItem.id}>
-            <Color color={currentArrayItem} />
+            <Color color={currentArrayItem} onDelete={handleDeleteColor} />
           </li>
         ))}
       </ul>
