@@ -8,8 +8,8 @@ export default function ColorForm({ onAddColor }) {
   const [hex, setHex] = useState("#ff0000");
   const [contrastText, setContrastText] = useState("#ffffff");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
     const newColor = {
       id: nanoid(),
@@ -27,26 +27,23 @@ export default function ColorForm({ onAddColor }) {
 
   return (
     <form className="color-form" onSubmit={handleSubmit}>
-      <ul>
-        <li>
-          <label>Role</label>
-          <input
-            type="text"
-            value={role}
-            onChange={(e) => setRole(e.target.value)}
-            required
-          />
-        </li>
-        <ColorInput label="Color" value={hex} onChange={setHex} />
-        <ColorInput
-          label="Contrast Text"
-          value={contrastText}
-          onChange={setContrastText}
-        />
-        <li>
-          <button type="submit">Add Color</button>
-        </li>
-      </ul>
+      <label>Role</label>
+      <input
+        type="text"
+        value={role}
+        onChange={(event) => setRole(event.target.value)}
+        required
+      />
+
+      <ColorInput label="Color" value={hex} onChange={setHex} />
+      <ColorInput
+        type="color"
+        label="Contrast Text"
+        value={contrastText}
+        onChange={setContrastText}
+      />
+
+      <button type="submit">Add Color</button>
     </form>
   );
 }

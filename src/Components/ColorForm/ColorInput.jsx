@@ -2,18 +2,13 @@ import "./ColorInput.css";
 
 export default function ColorInput({ label, value, onChange }) {
   return (
-    <li className="color-input">
+    <div className="color-input">
       <label>{label}</label>
       <input
         type="color"
         value={value}
-        onChange={(e) => onChange(e.target.value)}
+        onChange={(event) => onChange(event.target.value)}
       />
-      <input
-        type="text"
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-      />
-    </li>
+    </div>
   );
 }
