@@ -8,7 +8,7 @@ function App() {
   const [colors, setColors] = useState(initialColors);
 
   const handleAddColor = (color) => {
-    console.log("Adding color:", color);
+    // console.log("Adding color:", color);
     setColors([...colors, color]);
   };
 
