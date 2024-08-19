@@ -1,17 +1,18 @@
-import "./Color.css";
-
 export default function Color({ color }) {
   return (
     <div
-      className="color-card"
       style={{
-        background: color.hex,
+        backgroundColor: color.hex,
         color: color.contrastText,
+        padding: "20px",
+        borderRadius: "5px",
+        margin: "10px 0",
+        textAlign: "center",
       }}
     >
-      <h3 className="color-card-headline">{color.hex}</h3>
-      <h4>{color.role}</h4>
-      <p>contrast: {color.contrastText}</p>
+      <h2>{color.role}</h2>
+      <p>Hex: {color.hex}</p>
+      <p>Contrast Text: {color.contrastText}</p>
     </div>
   );
 }

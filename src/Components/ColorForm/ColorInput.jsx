@@ -1,8 +1,8 @@
-import React from "react";
+import "./ColorInput.css";
 
-const ColorInput = ({ label, value, onChange }) => {
+export default function ColorInput({ label, value, onChange }) {
   return (
-    <div className="color_input">
+    <li className="color-input">
       <label>{label}</label>
       <input
         type="color"
@@ -13,8 +13,7 @@ const ColorInput = ({ label, value, onChange }) => {
         type="text"
         value={value}
         onChange={(e) => onChange(e.target.value)}
-      ></input>
-    </div>
+      />
+    </li>
   );
-};
-export default ColorInput;
+}
