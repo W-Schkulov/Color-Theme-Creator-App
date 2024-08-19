@@ -1,28 +1,53 @@
 .color-card {
-  margin: 10px;
   padding: 20px;
   border-radius: 5px;
+  margin: 10px 0;
+  text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.color-card-headline {
-  display: inline;
-  padding: 2px 6px;
-  background: black;
-  color: white;
+.color-card-highlight {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
-ul {
-  padding: 0;
-  margin: 0;
-}
-li {
-  list-style: none;
-}
-.btn-delete {
-  background: red;
+
+.btn_delete {
+  background-color: red;
   color: white;
   border: none;
-  padding: 5px 10px;
   border-radius: 5px;
+  padding: 10px;
   cursor: pointer;
+  margin-top: 10px;
+  width: 40%;
+}
+
+.btn_delete:hover {
+  background-color: #d43f3f;
+}
+
+.btn_cancel {
+  background-color: #ccc;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 40%;
+}
+
+.btn_cancel:hover {
+  background-color: #999;
+}
+
+.no-colors-message {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  color: #333;
 }
