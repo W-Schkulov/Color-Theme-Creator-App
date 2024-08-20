@@ -37,7 +37,7 @@ export default function ColorCard({ color, onDelete, onUpdate }) {
       style={{ backgroundColor: color.hex, color: color.contrastText }}
     >
       {isConfirming ? (
-        <div className="color-card-highlight">
+        <div className="color_card_highlight">
           <p>Are you sure you want to delete this color?</p>
           <button className="btn_delete" onClick={confirmDelete}>
             Yes, Delete

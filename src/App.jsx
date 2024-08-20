@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { initialColors } from "./lib/colors";
-import Color from "./Components/Color/Color";
+import ColorCard from "./Components/Color/ColorCard";
 import "./App.css";
 import ColorForm from "./Components/ColorForm/ColorForm";
 
@@ -35,7 +35,7 @@ function App() {
         <ul>
           {colors.map((color) => (
             <li key={color.id}>
-              <Color
+              <ColorCard
                 color={color}
                 onDelete={handleDeleteColor}
                 onUpdate={handleUpdateColor}
