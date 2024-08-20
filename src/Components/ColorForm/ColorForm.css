@@ -18,20 +18,8 @@ label {
   align-self: flex-start;
 }
 
+input[type="text"],
 input[type="color"] {
-  -webkit-appearance: none;
-  appearance: none;
-  padding: 0;
-  margin: 0;
-  border: none;
-  width: 100%;
-  height: 40px;
-  cursor: pointer;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-input[type="text"] {
   margin-bottom: 15px;
   padding: 10px;
   width: 100%;
@@ -40,6 +28,10 @@ input[type="text"] {
   font-size: 1rem;
   box-sizing: border-box;
   height: 40px;
+}
+
+input[type="color"] {
+  cursor: pointer;
 }
 
 input[type="color"]::-webkit-color-swatch-wrapper {
@@ -62,8 +54,44 @@ button {
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s ease;
+  margin-bottom: 10px;
 }
 
 button:hover {
   background-color: #0056b3;
+}
+
+/* Styling für die Buttons */
+.btn {
+  width: calc(50% - 5px);
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.btn-submit {
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn-submit:hover {
+  background-color: #45a049;
+}
+
+.btn-cancel {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background-color: #e53935;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }

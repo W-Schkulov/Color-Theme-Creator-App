@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { initialColors } from "./lib/colors";
-import Color from "./Components/Color/Color";
+import ColorCard from "./Components/Color/ColorCard";
 import "./App.css";
 import ColorForm from "./Components/ColorForm/ColorForm";
 
@@ -15,6 +15,14 @@ function App() {
     setColors(colors.filter((color) => color.id !== id));
   };
 
+  const handleUpdateColor = (updatedColor) => {
+    setColors(
+      colors.map((color) =>
+        color.id === updatedColor.id ? updatedColor : color
+      )
+    );
+  };
+
   return (
     <>
       <h1>Theme Creator</h1>
@@ -25,9 +33,13 @@ function App() {
         </p>
       ) : (
         <ul>
-          {colors.map((currentArrayItem) => (
-            <li key={currentArrayItem.id}>
-              <Color color={currentArrayItem} onDelete={handleDeleteColor} />
+          {colors.map((color) => (
+            <li key={color.id}>
+              <ColorCard
+                color={color}
+                onDelete={handleDeleteColor}
+                onUpdate={handleUpdateColor}
+              />
             </li>
           ))}
         </ul>
