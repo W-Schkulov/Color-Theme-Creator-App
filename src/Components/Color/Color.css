@@ -24,6 +24,9 @@
   cursor: pointer;
   margin-top: 10px;
   width: 40%;
+  outline: none;
+  box-shadow: 0 0 0 2px #ff0000;
+  transition: background-color 0.3s ease;
 }
 
 .btn_delete:hover {
@@ -39,6 +42,10 @@
   cursor: pointer;
   margin-top: 10px;
   width: 40%;
+  outline: none;
+  box-shadow: 0 0 0 2px #ccc;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
 }
 
 .btn_cancel:hover {
@@ -50,4 +57,23 @@
   font-size: 1.2rem;
   margin-top: 20px;
   color: #333;
+}
+
+.btn_edit {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 40%;
+  outline: none;
+  box-shadow: 0 0 0 2px #007bff;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+.btn_edit:hover {
+  background-color: #0056b3;
 }
