@@ -1,0 +1,31 @@
+.contrast_score_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%;
+}
+.contrast_score {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  width: 30%;
+  text-align: center;
+}
+
+.contrast_score.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+.contrast_score.fail {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+.contrast_score .score {
+  display: flex;
+  justify-content: space-between;
+}

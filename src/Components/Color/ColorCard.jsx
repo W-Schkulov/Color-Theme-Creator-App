@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./Color.css";
 import ColorForm from "../ColorForm/ColorForm";
-import CopyToClipboard from "../CopyToClipboard";
+import CopyToClipboard from "../ColorForm/CopyToClipboard";
+import ContrastScore from "../ColorForm/ContrastScore";
 
 export default function ColorCard({ color, onDelete, onUpdate }) {
   const [isConfirming, setIsConfirming] = useState(false);
@@ -65,6 +66,10 @@ export default function ColorCard({ color, onDelete, onUpdate }) {
             Delete
           </button>
           <CopyToClipboard hexCode={color.hex} />
+          <ContrastScore
+            colorHex={color.hex}
+            contrastTextHex={color.contrastText}
+          />
         </>
       )}
     </div>

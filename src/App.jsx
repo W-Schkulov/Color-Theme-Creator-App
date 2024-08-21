@@ -9,7 +9,7 @@ function App() {
     defaultValue: initialColors,
   });
   const handleAddColor = (color) => {
-    setColors([...colors, color]);
+    setColors([color, ...colors]);
   };
 
   const handleDeleteColor = (id) => {
