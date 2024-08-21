@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./Color.css";
 import ColorForm from "../ColorForm/ColorForm";
+import CopyToClipboard from "../CopyToClipboard";
 
 export default function ColorCard({ color, onDelete, onUpdate }) {
   const [isConfirming, setIsConfirming] = useState(false);
@@ -63,6 +64,7 @@ export default function ColorCard({ color, onDelete, onUpdate }) {
           <button className="btn_delete" onClick={handleDeleteClick}>
             Delete
           </button>
+          <CopyToClipboard hexCode={color.hex} />
         </>
       )}
     </div>

@@ -77,3 +77,28 @@
 .btn_edit:hover {
   background-color: #0056b3;
 }
+
+.btn_copy {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 40%;
+  outline: none;
+  box-shadow: 0 0 0 2px #28a745;
+  transition: background-color 0.3s ease;
+}
+.btn_copy:hover {
+  background-color: #8dbf00;
+}
+.copy_confirmation {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
