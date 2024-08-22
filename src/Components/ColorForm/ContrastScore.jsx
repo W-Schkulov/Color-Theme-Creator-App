@@ -5,9 +5,6 @@ export default function ContrastScore({ colorHex, contrastTextHex }) {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setIsLoading(true);
-    }, 200);
     async function fetchContrastData() {
       const URL = "https://www.aremycolorsaccessible.com/api/are-they";
 
@@ -35,7 +32,6 @@ export default function ContrastScore({ colorHex, contrastTextHex }) {
       } catch (error) {
         console.error("Failed to fetch contrast data:", error);
       } finally {
-        clearTimeout(timeoutId);
         setIsLoading(false);
       }
     }
