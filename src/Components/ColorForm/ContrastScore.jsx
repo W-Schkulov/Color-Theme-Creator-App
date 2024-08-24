@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./ContrastScore.css";
+
 export default function ContrastScore({ colorHex, contrastTextHex }) {
   const [contrastData, setContrastData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
