@@ -31,12 +31,54 @@ export const initialColors = [
   { id: "c10", role: "success main", hex: "#4CAF50", contrastText: "#FFFFFF" },
   { id: "c11", role: "success dark", hex: "#388E3C", contrastText: "#FFFFFF" },
   { id: "c12", role: "success light", hex: "#81C784", contrastText: "#000000" },
+  { id: "c13", role: "primary main", hex: "#ff4500", contrastText: "#FFFFFF" },
+  { id: "c14", role: "primary dark", hex: "#d23600", contrastText: "#FFFFFF" },
+  { id: "c15", role: "primary light", hex: "#ff7f50", contrastText: "#000000" },
+  { id: "c16", role: "primary main", hex: "#0077be", contrastText: "#FFFFFF" },
+  { id: "c17", role: "primary dark", hex: "#005a8c", contrastText: "#FFFFFF" },
+  { id: "c18", role: "primary light", hex: "#66b2ff", contrastText: "#000000" },
+  { id: "c19", role: "primary main", hex: "#228b22", contrastText: "#FFFFFF" },
+  { id: "c20", role: "primary dark", hex: "#006400", contrastText: "#FFFFFF" },
+  { id: "c21", role: "primary light", hex: "#32cd32", contrastText: "#000000" },
+  { id: "c22", role: "primary main", hex: "#8a2be2", contrastText: "#FFFFFF" },
+  { id: "c23", role: "primary dark", hex: "#4b0082", contrastText: "#FFFFFF" },
+  { id: "c24", role: "primary light", hex: "#9370db", contrastText: "#000000" },
+  { id: "c25", role: "primary main", hex: "#d2b48c", contrastText: "#000000" },
+  { id: "c26", role: "primary dark", hex: "#a0522d", contrastText: "#FFFFFF" },
+  { id: "c27", role: "primary light", hex: "#f4a460", contrastText: "#000000" },
+  { id: "c28", role: "primary main", hex: "#ff8c00", contrastText: "#FFFFFF" },
+  { id: "c29", role: "primary dark", hex: "#b5651d", contrastText: "#FFFFFF" },
+  { id: "c30", role: "primary light", hex: "#ffdab9", contrastText: "#000000" },
+  { id: "c31", role: "primary main", hex: "#ff69b4", contrastText: "#FFFFFF" },
+  { id: "c32", role: "primary dark", hex: "#db7093", contrastText: "#FFFFFF" },
+  { id: "c33", role: "primary light", hex: "#ffb6c1", contrastText: "#000000" },
+  { id: "c34", role: "primary main", hex: "#191970", contrastText: "#FFFFFF" },
+  { id: "c35", role: "primary dark", hex: "#000080", contrastText: "#FFFFFF" },
+  { id: "c36", role: "primary light", hex: "#4169e1", contrastText: "#000000" },
+  { id: "c37", role: "primary main", hex: "#ff6347", contrastText: "#FFFFFF" },
+  { id: "c38", role: "primary dark", hex: "#cd5c5c", contrastText: "#FFFFFF" },
+  { id: "c39", role: "primary light", hex: "#ffa07a", contrastText: "#000000" },
+  { id: "c40", role: "primary main", hex: "#e6e6fa", contrastText: "#000000" },
+  { id: "c41", role: "primary dark", hex: "#dda0dd", contrastText: "#FFFFFF" },
+  { id: "c42", role: "primary light", hex: "#f8f8ff", contrastText: "#000000" },
+  { id: "c43", role: "primary main", hex: "#afeeee", contrastText: "#000000" },
+  { id: "c44", role: "primary dark", hex: "#4682b4", contrastText: "#FFFFFF" },
+  { id: "c45", role: "primary light", hex: "#b0e0e6", contrastText: "#000000" },
+  { id: "c46", role: "primary main", hex: "#8b4513", contrastText: "#FFFFFF" },
+  { id: "c47", role: "primary dark", hex: "#a0522d", contrastText: "#FFFFFF" },
+  { id: "c48", role: "primary light", hex: "#d2b48c", contrastText: "#000000" },
+  { id: "c49", role: "primary main", hex: "#39ff14", contrastText: "#000000" },
+  { id: "c50", role: "primary dark", hex: "#00ff00", contrastText: "#000000" },
+  { id: "c51", role: "primary light", hex: "#adff2f", contrastText: "#000000" },
+  { id: "c52", role: "primary main", hex: "#800080", contrastText: "#FFFFFF" },
+  { id: "c53", role: "primary dark", hex: "#4b0082", contrastText: "#FFFFFF" },
+  { id: "c54", role: "primary light", hex: "#9370db", contrastText: "#000000" },
 ];
 
 export const initialThemes = [
   {
     id: "t1",
-    name: "Default Theme",
+    name: "Warm Colors Theme",
     colors: [
       {
         id: "c1",
@@ -60,7 +102,55 @@ export const initialThemes = [
   },
   {
     id: "t2",
-    name: "2nd Theme",
+    name: "Cool Colors Theme",
+    colors: [
+      {
+        id: "c4",
+        role: "secondary main",
+        hex: "#5C6BC0",
+        contrastText: "#FFFFFF",
+      },
+      {
+        id: "c5",
+        role: "secondary dark",
+        hex: "#3949AB",
+        contrastText: "#FFFFFF",
+      },
+      {
+        id: "c6",
+        role: "secondary light",
+        hex: "#9FA8DA",
+        contrastText: "#000000",
+      },
+    ],
+  },
+  {
+    id: "t3",
+    name: "Dark Background Theme",
+    colors: [
+      {
+        id: "c7",
+        role: "background main",
+        hex: "#252629",
+        contrastText: "#FFFFFF",
+      },
+      {
+        id: "c8",
+        role: "background dark",
+        hex: "#1b1d1f",
+        contrastText: "#FFFFFF",
+      },
+      {
+        id: "c9",
+        role: "background light",
+        hex: "#43464b",
+        contrastText: "#FFFFFF",
+      },
+    ],
+  },
+  {
+    id: "t4",
+    name: "Success Colors Theme",
     colors: [
       {
         id: "c10",
@@ -78,6 +168,342 @@ export const initialThemes = [
         id: "c12",
         role: "success light",
         hex: "#81C784",
+        contrastText: "#000000",
+      },
+    ],
+  },
+  {
+    id: "t5",
+    name: "Sunset Theme",
+    colors: [
+      {
+        id: "c13",
+        role: "primary main",
+        hex: "#ff4500",
+        contrastText: "#FFFFFF",
+      },
+      {
+        id: "c14",
+        role: "primary dark",
+        hex: "#d23600",
+        contrastText: "#FFFFFF",
+      },
+      {
+        id: "c15",
+        role: "primary light",
+        hex: "#ff7f50",
+        contrastText: "#000000",
+      },
+    ],
+  },
+  {
+    id: "t6",
+    name: "Ocean Breeze Theme",
+    colors: [
+      {
+        id: "c16",
+        role: "primary main",
+        hex: "#0077be",
+        contrastText: "#FFFFFF",
+      },
+      {
+        id: "c17",
+        role: "primary dark",
+        hex: "#005a8c",
+        contrastText: "#FFFFFF",
+      },
+      {
+        id: "c18",
+        role: "primary light",
+        hex: "#66b2ff",
+        contrastText: "#000000",
+      },
+    ],
+  },
+  {
+    id: "t7",
+    name: "Forest Theme",
+    colors: [
+      {
+        id: "c19",
+        role: "primary main",
+        hex: "#228b22",
+        contrastText: "#FFFFFF",
+      },
+      {
+        id: "c20",
+        role: "primary dark",
+        hex: "#006400",
+        contrastText: "#FFFFFF",
+      },
+      {
+        id: "c21",
+        role: "primary light",
+        hex: "#32cd32",
+        contrastText: "#000000",
+      },
+    ],
+  },
+  {
+    id: "t8",
+    name: "Berry Delight Theme",
+    colors: [
+      {
+        id: "c22",
+        role: "primary main",
+        hex: "#8a2be2",
+        contrastText: "#FFFFFF",
+      },
+      {
+        id: "c23",
+        role: "primary dark",
+        hex: "#4b0082",
+        contrastText: "#FFFFFF",
+      },
+      {
+        id: "c24",
+        role: "primary light",
+        hex: "#9370db",
+        contrastText: "#000000",
+      },
+    ],
+  },
+  {
+    id: "t9",
+    name: "Desert Theme",
+    colors: [
+      {
+        id: "c25",
+        role: "primary main",
+        hex: "#d2b48c",
+        contrastText: "#000000",
+      },
+      {
+        id: "c26",
+        role: "primary dark",
+        hex: "#a0522d",
+        contrastText: "#FFFFFF",
+      },
+      {
+        id: "c27",
+        role: "primary light",
+        hex: "#f4a460",
+        contrastText: "#000000",
+      },
+    ],
+  },
+  {
+    id: "t10",
+    name: "Autumn Leaves Theme",
+    colors: [
+      {
+        id: "c28",
+        role: "primary main",
+        hex: "#ff8c00",
+        contrastText: "#FFFFFF",
+      },
+      {
+        id: "c29",
+        role: "primary dark",
+        hex: "#b5651d",
+        contrastText: "#FFFFFF",
+      },
+      {
+        id: "c30",
+        role: "primary light",
+        hex: "#ffdab9",
+        contrastText: "#000000",
+      },
+    ],
+  },
+  {
+    id: "t11",
+    name: "Candy Theme",
+    colors: [
+      {
+        id: "c31",
+        role: "primary main",
+        hex: "#ff69b4",
+        contrastText: "#FFFFFF",
+      },
+      {
+        id: "c32",
+        role: "primary dark",
+        hex: "#db7093",
+        contrastText: "#FFFFFF",
+      },
+      {
+        id: "c33",
+        role: "primary light",
+        hex: "#ffb6c1",
+        contrastText: "#000000",
+      },
+    ],
+  },
+  {
+    id: "t12",
+    name: "Midnight Theme",
+    colors: [
+      {
+        id: "c34",
+        role: "primary main",
+        hex: "#191970",
+        contrastText: "#FFFFFF",
+      },
+      {
+        id: "c35",
+        role: "primary dark",
+        hex: "#000080",
+        contrastText: "#FFFFFF",
+      },
+      {
+        id: "c36",
+        role: "primary light",
+        hex: "#4169e1",
+        contrastText: "#000000",
+      },
+    ],
+  },
+  {
+    id: "t13",
+    name: "Sunrise Theme",
+    colors: [
+      {
+        id: "c37",
+        role: "primary main",
+        hex: "#ff6347",
+        contrastText: "#FFFFFF",
+      },
+      {
+        id: "c38",
+        role: "primary dark",
+        hex: "#cd5c5c",
+        contrastText: "#FFFFFF",
+      },
+      {
+        id: "c39",
+        role: "primary light",
+        hex: "#ffa07a",
+        contrastText: "#000000",
+      },
+    ],
+  },
+  {
+    id: "t14",
+    name: "Lavender Theme",
+    colors: [
+      {
+        id: "c40",
+        role: "primary main",
+        hex: "#e6e6fa",
+        contrastText: "#000000",
+      },
+      {
+        id: "c41",
+        role: "primary dark",
+        hex: "#dda0dd",
+        contrastText: "#FFFFFF",
+      },
+      {
+        id: "c42",
+        role: "primary light",
+        hex: "#f8f8ff",
+        contrastText: "#000000",
+      },
+    ],
+  },
+  {
+    id: "t15",
+    name: "Ice Blue Theme",
+    colors: [
+      {
+        id: "c43",
+        role: "primary main",
+        hex: "#afeeee",
+        contrastText: "#000000",
+      },
+      {
+        id: "c44",
+        role: "primary dark",
+        hex: "#4682b4",
+        contrastText: "#FFFFFF",
+      },
+      {
+        id: "c45",
+        role: "primary light",
+        hex: "#b0e0e6",
+        contrastText: "#000000",
+      },
+    ],
+  },
+  {
+    id: "t16",
+    name: "Earthy Theme",
+    colors: [
+      {
+        id: "c46",
+        role: "primary main",
+        hex: "#8b4513",
+        contrastText: "#FFFFFF",
+      },
+      {
+        id: "c47",
+        role: "primary dark",
+        hex: "#a0522d",
+        contrastText: "#FFFFFF",
+      },
+      {
+        id: "c48",
+        role: "primary light",
+        hex: "#d2b48c",
+        contrastText: "#000000",
+      },
+    ],
+  },
+  {
+    id: "t17",
+    name: "Neon Theme",
+    colors: [
+      {
+        id: "c49",
+        role: "primary main",
+        hex: "#39ff14",
+        contrastText: "#000000",
+      },
+      {
+        id: "c50",
+        role: "primary dark",
+        hex: "#00ff00",
+        contrastText: "#000000",
+      },
+      {
+        id: "c51",
+        role: "primary light",
+        hex: "#adff2f",
+        contrastText: "#000000",
+      },
+    ],
+  },
+  {
+    id: "t18",
+    name: "Royal Purple Theme",
+    colors: [
+      {
+        id: "c52",
+        role: "primary main",
+        hex: "#800080",
+        contrastText: "#FFFFFF",
+      },
+      {
+        id: "c53",
+        role: "primary dark",
+        hex: "#4b0082",
+        contrastText: "#FFFFFF",
+      },
+      {
+        id: "c54",
+        role: "primary light",
+        hex: "#9370db",
         contrastText: "#000000",
       },
     ],

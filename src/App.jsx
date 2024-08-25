@@ -3,11 +3,24 @@ import { initialColors } from "./lib/colors";
 import ColorCard from "./Components/Color/ColorCard";
 import "./App.css";
 import ColorForm from "./Components/ColorForm/ColorForm";
+import ThemeManager from "./Components/ColorForm/Theme";
+import { nanoid } from "nanoid";
 
 function App() {
   const [colors, setColors] = useLocalStorageState("colors", {
     defaultValue: initialColors,
   });
+
+  const handleThemeChange = (themeColors) => {
+    const themeColorsArray = themeColors.map(({ role, hex, contrastText }) => ({
+      id: nanoid(), // Erstelle neue IDs für die Farben
+      role,
+      hex,
+      contrastText: contrastText || "#ffffff",
+    }));
+    setColors([...themeColorsArray, ...colors]); // Neue Farben hinzufügen, ohne bestehende zu überschreiben
+  };
+
   const handleAddColor = (color) => {
     setColors([color, ...colors]);
   };
@@ -25,10 +38,10 @@ function App() {
   };
 
   return (
-    <>
-      <h1>Theme Creator</h1>
-
-      <ColorForm onAddColor={handleAddColor} />
+    <div>
+      <h1>Color Theme Creator App</h1>
+      <ThemeManager onThemeChange={handleThemeChange} />{" "}
+      <ColorForm onAddColor={handleAddColor} />{" "}
       {colors.length === 0 ? (
         <p className="no-colors-message">
           No colors left. Please add new colors.
@@ -46,7 +59,7 @@ function App() {
           ))}
         </ul>
       )}
-    </>
+    </div>
   );
 }
 
