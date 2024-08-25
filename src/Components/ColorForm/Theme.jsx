@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { initialThemes } from "../../lib/colors"; // Importiere initialThemes
+import "./Theme.css";
 
 export default function ThemeManager({ onThemeChange }) {
   const [themes, setThemes] = useState(initialThemes); // Nutze initialThemes direkt aus dem Import
@@ -19,12 +20,14 @@ export default function ThemeManager({ onThemeChange }) {
     const selectedTheme = themes.find((theme) => theme.id === selectedThemeId);
     if (selectedTheme) {
       setThemeColors({
-        primaryMain: selectedTheme.colors.find((c) => c.role === "primary main")
-          .hex,
-        primaryDark: selectedTheme.colors.find((c) => c.role === "primary dark")
-          .hex,
+        primaryMain: selectedTheme.colors.find(
+          (color) => color.role === "primary main"
+        ).hex,
+        primaryDark: selectedTheme.colors.find(
+          (color) => color.role === "primary dark"
+        ).hex,
         primaryLight: selectedTheme.colors.find(
-          (c) => c.role === "primary light"
+          (color) => color.role === "primary light"
         ).hex,
       });
       onThemeChange(selectedTheme.colors);
@@ -93,7 +96,9 @@ export default function ThemeManager({ onThemeChange }) {
           </option>
         ))}
       </select>
-      <button onClick={handleAddTheme}>Add Theme</button>
+      <button className="btn_theme" onClick={handleAddTheme}>
+        Add Theme
+      </button>
       {isConfirmingDelete ? (
         <div>
           <p>Are you sure you want to delete this theme?</p>
@@ -101,7 +106,10 @@ export default function ThemeManager({ onThemeChange }) {
           <button onClick={() => setIsConfirmingDelete(false)}>Cancel</button>
         </div>
       ) : (
-        <button onClick={() => setIsConfirmingDelete(true)}>
+        <button
+          className="btn_theme"
+          onClick={() => setIsConfirmingDelete(true)}
+        >
           Delete Theme
         </button>
       )}
@@ -111,7 +119,7 @@ export default function ThemeManager({ onThemeChange }) {
           <input
             type="text"
             value={newThemeName}
-            onChange={(e) => setNewThemeName(e.target.value)}
+            onChange={(event) => setNewThemeName(event.target.value)}
             placeholder="Enter new theme name"
           />
           <div>
@@ -119,7 +127,9 @@ export default function ThemeManager({ onThemeChange }) {
             <input
               type="color"
               value={themeColors.primaryMain}
-              onChange={(e) => handleColorChange("primaryMain", e.target.value)}
+              onChange={(event) =>
+                handleColorChange("primaryMain", event.target.value)
+              }
             />
           </div>
           <div>
@@ -127,7 +137,9 @@ export default function ThemeManager({ onThemeChange }) {
             <input
               type="color"
               value={themeColors.primaryDark}
-              onChange={(e) => handleColorChange("primaryDark", e.target.value)}
+              onChange={(event) =>
+                handleColorChange("primaryDark", event.target.value)
+              }
             />
           </div>
           <div>
@@ -135,8 +147,8 @@ export default function ThemeManager({ onThemeChange }) {
             <input
               type="color"
               value={themeColors.primaryLight}
-              onChange={(e) =>
-                handleColorChange("primaryLight", e.target.value)
+              onChange={(event) =>
+                handleColorChange("primaryLight", event.target.value)
               }
             />
           </div>
@@ -145,6 +157,7 @@ export default function ThemeManager({ onThemeChange }) {
         </div>
       ) : (
         <button
+          className="btn_theme"
           onClick={() => {
             setIsEditing(true);
             const theme = themes.find((theme) => theme.id === selectedTheme);
