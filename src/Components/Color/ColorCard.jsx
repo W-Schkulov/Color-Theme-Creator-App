@@ -5,79 +5,72 @@ import CopyToClipboard from "../ColorForm/CopyToClipboard";
 import ContrastScore from "../ColorForm/ContrastScore";
 
 export default function ColorCard({ color, onDelete, onUpdate }) {
-  // ColorCard-Komponente, die eine Farbe anzeigt und die Bearbeitung oder das Löschen ermöglicht
-
-  const [isConfirming, setIsConfirming] = useState(false); // Zustand, ob die Löschung bestätigt werden soll
-  const [isEditing, setIsEditing] = useState(false); // Zustand, ob die Farbe bearbeitet wird
+  const [isConfirming, setIsConfirming] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
 
   const handleDeleteClick = () => {
-    setIsConfirming(true); // Setzt den Zustand auf "Bestätigung der Löschung anzeigen"
+    setIsConfirming(true);
   };
 
   const confirmDelete = () => {
-    onDelete(color.id); // Ruft die onDelete-Funktion auf, um die Farbe zu löschen
+    onDelete(color.id);
   };
 
   const cancelDelete = () => {
-    setIsConfirming(false); // Setzt den Zustand zurück, um die Bestätigung der Löschung abzubrechen
+    setIsConfirming(false);
   };
 
   const handleEditClick = () => {
-    setIsEditing(true); // Setzt den Zustand auf "Bearbeitungsmodus aktivieren"
+    setIsEditing(true);
   };
 
   const handleFormSubmit = (updatedColor) => {
-    onUpdate(updatedColor); // Ruft die onUpdate-Funktion auf, um die Farbe mit den neuen Werten zu aktualisieren
-    setIsEditing(false); // Schaltet den Bearbeitungsmodus wieder aus
+    onUpdate(updatedColor);
+    setIsEditing(false);
   };
 
   const handleCancelEdit = () => {
-    setIsEditing(false); // Schaltet den Bearbeitungsmodus ohne Änderungen wieder aus
+    setIsEditing(false);
   };
 
   return (
     <div
-      className="color-card" // Setzt die CSS-Klasse für das Farbkarten-Element
-      style={{ backgroundColor: color.hex, color: color.contrastText }} // Setzt die Hintergrundfarbe und die Textfarbe basierend auf den übergebenen Farbwerten
+      className="color-card"
+      style={{ backgroundColor: color.hex, color: color.contrastText }}
     >
-      {isConfirming ? ( // Wenn der Löschvorgang bestätigt werden soll
+      {isConfirming ? (
         <div className="color_card_highlight">
           <p>Are you sure you want to delete this color?</p>{" "}
-          {/* Bestätigungsnachricht */}
           <button className="btn_delete" onClick={confirmDelete}>
-            Yes, Delete {/* Button zum Bestätigen der Löschung */}
+            Yes, Delete
           </button>
           <button className="btn_cancel" onClick={cancelDelete}>
-            Cancel {/* Button zum Abbrechen der Löschung */}
+            Cancel
           </button>
         </div>
-      ) : isEditing ? ( // Wenn die Farbe bearbeitet wird
+      ) : isEditing ? (
         <ColorForm
-          initialColor={color} // Übergibt die aktuelle Farbe an das Formular
-          onSubmit={handleFormSubmit} // Übergibt die Funktion, die beim Absenden des Formulars aufgerufen wird
-          onCancel={handleCancelEdit} // Übergibt die Funktion, die beim Abbrechen der Bearbeitung aufgerufen wird
+          initialColor={color}
+          onSubmit={handleFormSubmit}
+          onCancel={handleCancelEdit}
         />
       ) : (
         <>
           {" "}
-          {/* Standardanzeige der Farbkarte */}
-          <h2>{color.role}</h2> {/* Anzeige des Farbnamens oder der Rolle */}
-          <p>Hex: {color.hex}</p> {/* Anzeige des Hex-Codes */}
+          <h2>{color.role}</h2>
+          <p>Hex: {color.hex}</p>
           <p>Contrast Text: {color.contrastText}</p>{" "}
-          {/* Anzeige des Kontrasttextes */}
           <button className="btn_edit" onClick={handleEditClick}>
-            Edit {/* Button zum Aktivieren des Bearbeitungsmodus */}
+            Edit
           </button>
           <button className="btn_delete" onClick={handleDeleteClick}>
-            Delete {/* Button zum Aktivieren der Löschbestätigung */}
+            Delete
           </button>
           <CopyToClipboard hexCode={color.hex} />{" "}
-          {/* Komponente zum Kopieren des Hex-Codes in die Zwischenablage */}
           <ContrastScore
             colorHex={color.hex}
             contrastTextHex={color.contrastText}
           />{" "}
-          {/* Komponente zur Berechnung des Kontrastverhältnisses */}
         </>
       )}
     </div>
