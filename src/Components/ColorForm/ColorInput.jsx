@@ -4,6 +4,7 @@ export default function ColorInput({ label, value, onChange }) {
   return (
     <div className="color-input">
       <label>{label}</label>
+
       <input
         type="text"
         value={value}

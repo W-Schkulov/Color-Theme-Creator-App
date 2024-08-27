@@ -25,7 +25,6 @@ export default function ColorForm({
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
     const colorData = {
       id: initialColor?.id || nanoid(),
       role,
@@ -56,7 +55,7 @@ export default function ColorForm({
         required
       />
       <div className="color-input-container">
-        <ColorInput label="Color" value={hex} onChange={setHex} />
+        <ColorInput label="Color" value={hex} onChange={setHex} />{" "}
         <input
           type="color"
           value={hex}
@@ -78,12 +77,12 @@ export default function ColorForm({
         />
       </div>
       <button type="submit" className="btn btn-submit">
-        {initialColor ? "Update Color" : "Add Color"}
+        {initialColor ? "Update Color" : "Add Color"}{" "}
       </button>
 
       {initialColor && (
         <button type="button" className="btn btn-cancel" onClick={onCancel}>
-          Cancel
+          Cancel{" "}
         </button>
       )}
     </form>

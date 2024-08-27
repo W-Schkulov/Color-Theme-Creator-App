@@ -3,6 +3,7 @@ import "./ContrastScore.css";
 
 export default function ContrastScore({ colorHex, contrastTextHex }) {
   const [contrastData, setContrastData] = useState(null);
+
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -13,7 +14,7 @@ export default function ContrastScore({ colorHex, contrastTextHex }) {
       try {
         const response = await fetch(URL, {
           method: "POST",
-          mode: "cors",
+          mode: "cors", //
           body: JSON.stringify({
             colors: [colorHex, contrastTextHex],
           }),

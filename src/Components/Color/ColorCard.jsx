@@ -40,7 +40,7 @@ export default function ColorCard({ color, onDelete, onUpdate }) {
     >
       {isConfirming ? (
         <div className="color_card_highlight">
-          <p>Are you sure you want to delete this color?</p>
+          <p>Are you sure you want to delete this color?</p>{" "}
           <button className="btn_delete" onClick={confirmDelete}>
             Yes, Delete
           </button>
@@ -56,20 +56,21 @@ export default function ColorCard({ color, onDelete, onUpdate }) {
         />
       ) : (
         <>
+          {" "}
           <h2>{color.role}</h2>
           <p>Hex: {color.hex}</p>
-          <p>Contrast Text: {color.contrastText}</p>
+          <p>Contrast Text: {color.contrastText}</p>{" "}
           <button className="btn_edit" onClick={handleEditClick}>
             Edit
           </button>
           <button className="btn_delete" onClick={handleDeleteClick}>
             Delete
           </button>
-          <CopyToClipboard hexCode={color.hex} />
+          <CopyToClipboard hexCode={color.hex} />{" "}
           <ContrastScore
             colorHex={color.hex}
             contrastTextHex={color.contrastText}
-          />
+          />{" "}
         </>
       )}
     </div>
